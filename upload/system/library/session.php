@@ -28,11 +28,19 @@ class Session {
 		$this->data =& $_SESSION[$key];
 	}
 
-	public function getId() {
+	public function getId()	{
 		return session_id();
 	}
 
 	public function destroy() {
 		return session_destroy();
+	}
+
+	public function unsetVariables($list) {
+		$vars = explode(',', $list);
+
+		foreach ($vars as $varName) {
+			unset($this->data[trim($varName)]);
+		}
 	}
 }

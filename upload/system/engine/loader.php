@@ -100,7 +100,7 @@ final class Loader {
 		// $this->event->trigger('post.view.' . str_replace('/', '.', $template), $output);
 
 		return $output;
-	}
+    }
 
 	public function helper($helper) {
 		$file = DIR_SYSTEM . 'helper/' . str_replace('../', '', (string)$helper) . '.php';
