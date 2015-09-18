@@ -96,7 +96,7 @@ class ControllerAccountLogin extends Controller {
 		$this->customer->logout();
 		$this->cart->clear();
 
-		$vars = 'wishlist, payment_address, payment_method, payment_methods, shipping_address, shipping_method,'
+		$vars = 'payment_address, payment_method, payment_methods, shipping_address, shipping_method,'
 			. 'shipping_methods, comment, order_id, coupon, reward, voucher, vouchers';
 
 		$this->session->unsetVariables($vars);
